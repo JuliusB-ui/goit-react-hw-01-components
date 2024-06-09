@@ -1,0 +1,49 @@
+.friendListItem {
+  padding: 15px 30px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.status {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.online {
+  composes: status;
+  background-color: rgb(38, 151, 38);
+}
+
+.offline {
+  composes: status;
+  background-color: rgb(234, 38, 38);
+}
+
+.avatar {
+  transform: scale(0.9);
+  transition: transform 250ms ease-in-out;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 400;
+  transform: scale(0.9);
+  transition: transform 250ms ease-in-out, font-weight 250ms ease-in;
+}
+
+.friendListItem:hover .avatar {
+  transform: scale(1);
+}
+
+.friendListItem:hover .name {
+  transform: scale(1);
+  font-weight: bold;
+}
